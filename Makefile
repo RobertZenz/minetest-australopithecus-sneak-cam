@@ -36,4 +36,9 @@ release:
 	tar -c --gz -C $(release) -f $(release)/$(release_name).tar.gz $(release_name)/
 	cd $(release); zip -r -9 $(release_name).zip $(release_name); cd -
 	
+.PHONY: update-deps
+update-deps:
+	git submodule foreach git pull origin master
+	git add deps/
+	git commit -m "Updated dependencies."
 

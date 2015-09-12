@@ -1,0 +1,23 @@
+minetest-australopithecus-sneak-cam
+===================================
+
+A simple system that lowers the viewpoint of the players when they are sneaking.
+
+
+Usage
+=====
+
+The systems activates itself, you just need to add the mod to the subgame.
+
+
+Configuration
+=============
+
+The system can be configured by adding settings to `minetest.conf` file.
+
+    # If the system should be active or not, defaults to true.
+    sneakcam_activate = true
+    
+    # The offset by which the viewpoing is lowered, defaults to 1.65.
+    sneakcam_offset = 1.65
+

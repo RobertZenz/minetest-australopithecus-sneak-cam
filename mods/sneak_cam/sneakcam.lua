@@ -28,6 +28,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- The main object for the sneak cam mod.
 sneakcam = {
 	--- The offset by which the camera is lowered if the player is sneaking.
+	-- The value is read from the configuration file, the name of the value
+	-- is sneakcam_offset, defaults to 1.65.
 	offset = settings.get_number("sneakcam_offset", 1.65),
 	
 	--- The state of all players the last time the system has seen them.
@@ -36,7 +38,7 @@ sneakcam = {
 
 
 --- Activates the sneakcam system. But checks if it is has been disabled via
--- the configuration.
+-- the configuration, the name of the value is sneakcam_activate.
 function sneakcam.activate()
 	if settings.get_bool("sneakcam_activate", true) then
 		minetest.register_globalstep(sneakcam.update_player_cams)

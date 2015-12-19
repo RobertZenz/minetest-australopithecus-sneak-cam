@@ -56,6 +56,10 @@
 	<td class="summary">Activates the sneakcam system.</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#activate_internal">activate_internal ()</a></td>
+	<td class="summary">Activates the system, without checking the configuration.</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#update_player_cam">update_player_cam (player)</a></td>
 	<td class="summary">Updates the camera of the given player.</td>
 	</tr>
@@ -73,6 +77,14 @@
 </table>
 <h2><a href="#Fields">Fields</a></h2>
 <table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#activate">activate</a></td>
+	<td class="summary">If the system should activated automatically.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#active">active</a></td>
+	<td class="summary">If the system is active/has been activated.</td>
+	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#offset">offset</a></td>
 	<td class="summary">The offset by which the camera is lowered if the player is sneaking.</td>
@@ -92,6 +104,21 @@
     <dd>
     Activates the sneakcam system.  But checks if it is has been disabled via
  the configuration, the name of the value is sneakcam_activate.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "activate_internal"></a>
+    <strong>activate_internal ()</strong>
+    </dt>
+    <dd>
+    Activates the system, without checking the configuration.  Multiple
+ invocations have no effect.
 
 
 
@@ -154,6 +181,34 @@
 </dl>
     <h2><a name="Fields"></a>Fields</h2>
     <dl class="function">
+    <dt>
+    <a name = "activate"></a>
+    <strong>activate</strong>
+    </dt>
+    <dd>
+    If the system should activated automatically.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "active"></a>
+    <strong>active</strong>
+    </dt>
+    <dd>
+    If the system is active/has been activated.
+
+
+
+
+
+
+
+</dd>
     <dt>
     <a name = "offset"></a>
     <strong>offset</strong>

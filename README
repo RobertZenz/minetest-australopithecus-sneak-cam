@@ -5,13 +5,13 @@ A simple system that lowers the viewpoint of the players when they are sneaking.
 
 
 Usage
-=====
+-----
 
 The systems activates itself, you just need to add the mod to the subgame.
 
 
 Configuration
-=============
+-------------
 
 The system can be configured by adding settings to `minetest.conf` file.
 
@@ -20,4 +20,19 @@ The system can be configured by adding settings to `minetest.conf` file.
     
     # The offset by which the viewpoing is lowered, defaults to 1.65.
     sneakcam_offset = 1.65
+
+
+Run manually
+------------
+
+You can run the system manually by either invoking `sneakcam.update_player_cams`
+for all players, or by invoking `sneakcam.update_player_cam` which accepts
+the Player as single argument.
+
+
+Force activation
+----------------
+
+You can force the activation of the system, even if it has been disabled in
+the configuration, by invoking `sneakcam.activate_internal`.
 

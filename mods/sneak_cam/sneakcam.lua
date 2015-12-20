@@ -28,7 +28,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --- The main object for the sneak cam mod.
 sneakcam = {
 	--- If the system should activated automatically.
-	activate_automatically = settigs.get_bool("sneakcam_activate", true),
+	activate_automatically = settings.get_bool("sneakcam_activate", true),
 	
 	--- If the system is active/has been activated.
 	active = false,

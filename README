@@ -18,6 +18,9 @@ The system can be configured by adding settings to `minetest.conf` file.
     # If the system should be active or not, defaults to true.
     sneakcam_activate = true
     
+    # The interval in which the system runs, in seconds, defaults to 0.066.
+    sneakcam_interval = 0.066
+    
     # The offset by which the viewpoing is lowered, defaults to 1.65.
     sneakcam_offset = 1.65
 

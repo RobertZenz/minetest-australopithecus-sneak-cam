@@ -33,6 +33,9 @@ sneakcam = {
 	--- If the system is active/has been activated.
 	active = false,
 	
+	--- The interval in which the system updates, defaults to 0.066.
+	interval = settings.get_number("sneakcam_interval", 0.066),
+	
 	--- The offset by which the camera is lowered if the player is sneaking.
 	-- The value is read from the configuration file, the name of the value
 	-- is sneakcam_offset, defaults to 1.65.
@@ -55,7 +58,11 @@ end
 -- invocations have no effect.
 function sneakcam.activate_internal()
 	if not sneakcam.active then
-		minetest.register_globalstep(sneakcam.update_player_cams)
+		scheduler.schedule(
+			"sneakcam",
+			sneakcam.interval,
+			sneakcam.update_player_cams,
+			scheduler.OVERSHOOT_POLICY_RUN_ONCE)
 		
 		sneakcam.active = true
 	end
